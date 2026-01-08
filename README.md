@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Dotix – Job Scheduler & Automation System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective
+A mini job scheduling system that allows users to create background jobs,
+track their execution status, manually run jobs, and automatically notify
+external systems using webhooks when jobs complete.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Tech Stack
+**Frontend**
+- React
+- Tailwind CSS
+- React Router
 
-### `npm start`
+**Backend**
+- Node.js
+- Express
+- SQLite
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Integration**
+- 'https://webhook.site/eeae281a-ad5d-4dfe-ac60-3068fc971f92'
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
+- Create background jobs
+- View all jobs in a dashboard
+- Filter jobs by status and priority
+- Run jobs manually
+- Track job lifecycle (pending → running → completed)
+- Trigger webhook automatically on job completion
+- View detailed job information
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Job Execution Flow
+Create Job → Pending → Run Job → Running → Completed → Webhook Triggered
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Create Job
+![Create Job](./screenshots/creteJob.png)
 
-### `npm run eject`
+### Dashboard
+![Dashboard](./screenshots/Dashboard.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Run Job
+![Run Job](./screenshots/running.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Job Details
+![Job Details](./screenshots/jobDetails.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Webhook Triggered
+![Webhook Triggered](./screenshots/webHook.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## How to Run Locally
 
-## Learn More
+### Backend
+```bash
+cd backend
+npm install
+node app.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Frontend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+cd frontend
+npm install
+npm start
